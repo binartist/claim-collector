@@ -1,0 +1,39 @@
+{
+
+  "manifest_version": 2,
+  "name": "Claim Collector",
+  "version": "1.0",
+
+  "description": "Automatically collect your claim info",
+
+  "icons": {
+    "48": "icons/goblin48.jpg"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "monitor@cybergear.io",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "<all_urls>",
+    "notifications"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "32" : "icons/goblin48.jpg"
+    },
+    "default_title": "Claim Collector",
+    "default_popup": "popup/index.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
