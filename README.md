@@ -10,9 +10,13 @@ This webextension is a utility tool to collect claim report of IBM employees, wh
 3. Select manifest.json in root directory of the source code to open.
 
 <h4>For Chrome:</h4>
-1. Type <b>chrome://extensions/</b> in address bar.<br/>
-2. Click <i>Load unpacked extension...</i> button.<br/>
-3. Select root directory of the source code to open.
+1. Type <b>chrome://extensions</b> in address bar.<br/>
+2. Check <i>Developer mode</i> box.
+3. Click <i>Load unpacked extension...</i> button.<br/>
+4. Select root directory of the source code to open.
+
+<h3>From Official Web App Store</h3>
+(Not published yet)
 
 <h2>Note</h2> 
 Your claim-report will be downloaded from https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel. If that URL doesn't work, you won't deliver the correct data to server.<br/>
