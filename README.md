@@ -1,10 +1,17 @@
 # claim-collector-webextension
-This WebExtensions works on Firefox and Chrome.
+This webextension works on Firefox and Chrome.
 
 Refer to the tips as following if your want to install from the source code.
 
-For FireFox, type about:debugging in address bar.
-For Chrome, type chrome://extensions/ in address bar.
+For FireFox:
+1. Type about:debugging in address bar.
+2. Click "Load Temporay Add-on" button.
+3. Select manifest.json in root directory of the source code to open.
+
+For Chrome:
+1. Type chrome://extensions/ in address bar.
+2. Click "Load unpacked extension..." button.
+3. Select root directory of the source code to open.
 
 To see the claim-report you delivered, please visit https://cybergear.io/claim-collector.
 
