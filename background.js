@@ -75,7 +75,7 @@ function array_to_base64(byteArray) {
     return output;
 }
 
-var username = '', password = '';
+var username = '', password = '', last_claim_date = '';
 
 function deliver_report(username, password, response) {
     var xmlHttp = new XMLHttpRequest();
@@ -109,20 +109,22 @@ function deliver_report(username, password, response) {
                             + currentdate.getMinutes() + ":"
                             + currentdate.getSeconds();
 
-                        console.log(datetime);
+                        // console.log(jsonObj.data.last_claim_date);
 
                         chrome.storage.local.set({
                             last_update: {
                                 datatime: datetime,
                                 code: jsonObj.code,
-                                msg: jsonObj.msg
+                                msg: jsonObj.msg,
+                                claim_date: jsonObj.data.last_claim_date
                             }
                         });
 
-                        response(jsonObj.code, jsonObj.msg);
+                        response(jsonObj.code, jsonObj.msg, jsonObj.data);
                     }
                 }
                 req.open('POST', 'http://cybergear.io:3000/report', false);
+                // req.open('POST', 'http://localhost:3000/report', false);
                 req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 req.send('report=' + base64Str + '&username=' + username);
             }
@@ -158,15 +160,16 @@ function deliver_report(username, password, response) {
     xmlHttp.send(null);
 };
 
-function repeatTask() {
-    deliver_report(username, password, function (code, msg) {
-        if (code == 0) {
+function scheduleDeliverTask() {
+    if (username && password) {
+        deliver_report(username, password, function (code, msg, data) {
+            console.log('date: ' + data.last_claim_date + ' isBehind: ' + data.is_behind);
 
-        }
-        else {
-            setTimeout(repeatTask, 10000);
-        }
-    });
+            if (code != 0) {
+                setTimeout(scheduleDeliverTask, 10 * 1000); // 10 Seconds
+            }
+        });
+    }
 }
 
 chrome.runtime.onMessage.addListener(
@@ -180,7 +183,19 @@ chrome.storage.local.get('user_info', function (res) {
     username = res.user_info.username;
     password = res.user_info.password;
 
-    if (username && password) {
-        repeatTask();
-    }
+    scheduleDeliverTask();
+});
+
+chrome.storage.local.get('last_update', function (res) {
+    last_claim_date = res.last_update.claim_date;
+
+    setInterval(function () {
+        var now = new Date();
+        var last = new Date(last_claim_date);
+
+        // console.log('diff: ' + (now - last));
+        if (now > last) {
+            scheduleDeliverTask();
+        }
+    }, 60 * 1000); //1 minute
 });

@@ -1,4 +1,4 @@
-# claim-collector-webextension
+# claim-gatherer-webextension
 <h2>Description</h2>
 This webextension is a utility tool to collect claim report of IBM employees, which works on Firefox, Chrome and Opera.
 
@@ -20,4 +20,4 @@ This webextension is a utility tool to collect claim report of IBM employees, wh
 
 <h2>Note</h2> 
 Your claim-report will be downloaded from https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel. If that URL doesn't work, you won't deliver the correct data to server.<br/>
-To see the claim-report you delivered, please visit https://cybergear.io/claim-collector.
+To see the claim-report you delivered, please visit https://cybergear.io/claim-gatherer.

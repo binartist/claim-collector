@@ -1,18 +1,17 @@
 {
 
   "manifest_version": 2,
-  "name": "Claim Collector",
+  "name": "Claim Gatherer",
+  "description": "Automatically gather your claim info",
   "version": "1.0",
-
-  "description": "Automatically collect your claim info",
-
+  "homepage_url": "https://github.com/binartist/claim-gatherer-webextension",
   "icons": {
-    "48": "icons/goblin48.jpg"
+    "96": "icons/cg-96.png"
   },
 
   "applications": {
     "gecko": {
-      "id": "monitor@cybergear.io",
+      "id": "claim-gatherer@cybergear.io",
       "strict_min_version": "45.0"
     }
   },
@@ -20,16 +19,13 @@
   "permissions": [
     "tabs",
     "storage",
-    "webRequest",
     "<all_urls>",
     "notifications"
   ],
 
   "browser_action": {
-    "default_icon": {
-      "32" : "icons/goblin48.jpg"
-    },
-    "default_title": "Claim Collector",
+    "default_icon": "icons/cg-96.png",
+    "default_title": "Claim Gatherer",
     "default_popup": "popup/index.html"
   },
 

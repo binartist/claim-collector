@@ -2,7 +2,7 @@
  * Created by binartist on 9/15/16.
  */
 
-var action_btn = document.querySelector('button')
+var action_btn = document.querySelector('#deliver_btn')
 var intranetid_input = document.querySelector('#intranetId');
 var password_input = document.querySelector('#password');
 var hint_label = document.querySelector('span');
@@ -10,6 +10,16 @@ var hint_label = document.querySelector('span');
 var hint_container = document.querySelector('.hint-container');
 var fading_circle = document.querySelector('.sk-fading-circle');
 
+var homepage_btn = document.querySelector('.homepage_btn');
+var webpage_btn = document.querySelector('.webpage_btn');
+
+homepage_btn.onclick = function () {
+    chrome.tabs.create({url:"https://github.com/binartist/claim-gatherer-webextension"});
+}
+
+webpage_btn.onclick = function () {
+    chrome.tabs.create({url:"https://cybergear.io/claim-gatherer"});
+}
 
 action_btn.onclick = function () {
     showHub();
@@ -55,3 +65,4 @@ function hideHub() {
         hint_container.style.display = "block";
     }, 1500)
 }
+

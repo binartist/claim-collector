@@ -3,7 +3,7 @@
 /*}*/
 
 body {
-    width: 200px;
+    width: 220px;
 }
 
 /*.input-container {*/
@@ -12,9 +12,7 @@ body {
 
 .input-container input {
     display: block;
-    width: 190px;
-    /*margin-top: 5px;*/
-    /*margin-right: 50px;*/
+    width: 214px;
 }
 
 .input-container input:last-child {
@@ -27,6 +25,13 @@ body {
 
 .action-container button{
     width: 100%;
+    background-color: rgb(7,136,241);
+    color: white;
+    border-radius: 4px;
+}
+
+.action-container button:hover {
+    background-color: rgb(53,115,226);
 }
 
 .hint-container {
@@ -36,6 +41,22 @@ body {
     height: 20px;
 }
 
+.homepage_btn {
+    width: 100%;
+    text-align: center;
+}
+
+.webpage_btn {
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    font-size: 10px;
+    padding-top: 5px;
+    border-top: 1px solid gray;
+}
 
 .sk-fading-circle {
     margin: 10px auto;
