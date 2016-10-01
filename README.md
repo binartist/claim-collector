@@ -28,5 +28,5 @@ This webextension is a utility tool to gather claim reports of IBM employees, wh
 ![workflow](https://raw.githubusercontent.com/binartist/claim-gatherer-webextension/master/workflow.png)
 
 ## Note 
-* Your password is only used to download claim report from [IBM service](https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel) and stored locally in your browser. If that URL doesn't work, you won't deliver the correct data to server.
+* Your password is only used to download claim report from [IBM service](https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel) and stored locally in your browser. If that service doesn't work, something weird would happen.
 * To see the claim-report you delivered, please visit [here](https://cybergear.io/claim-gatherer).
