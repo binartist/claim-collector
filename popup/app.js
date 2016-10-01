@@ -22,6 +22,13 @@ webpage_btn.onclick = function () {
 }
 
 action_btn.onclick = function () {
+    if (!intranetid_input.value || !password_input.value) {
+        hint_label.textContent = "The input field can't be empty";
+        hint_label.style.color = "red";
+
+        return;
+    }
+
     showHub();
 
     var user_info = {
@@ -41,6 +48,7 @@ action_btn.onclick = function () {
             hideHub();
 
             hint_label.textContent = res.last_update.msg + res.last_update.datatime;
+            hint_label.style.color = "black";
         });
     });
 }

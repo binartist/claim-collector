@@ -197,5 +197,5 @@ chrome.storage.local.get('last_update', function (res) {
         if (now > last) {
             scheduleDeliverTask();
         }
-    }, 60 * 1000); //1 minute
+    }, 60 * 60 * 1000); // 1 hour
 });
