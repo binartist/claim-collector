@@ -18,10 +18,14 @@ This webextension is a utility tool to gather claim reports of IBM employees, wh
 ### From Official Web App Store
 (Not published yet)
 
-### Usage
+## Usage
+  1. After installation, the icon of this webextension will show in browser menu. Click it to see the popup (refer to the screenshot as following).
+  ![screenshot](https://github.com/binartist/claim-gatherer-webextension/blob/master/screenshot.png)
+  2. Make sure to enter correct intranet id and password in the two input fields. 
+  3. A background task will deliver claim report to server automatically once you finhished **step 2**. But aslo you can do it manually by clicking *Deliver* button. 
 
 ## Workflow
-![alt text](https://raw.githubusercontent.com/binartist/claim-gatherer-webextension/master/workflow.png "workflow")
+![workflow](https://raw.githubusercontent.com/binartist/claim-gatherer-webextension/master/workflow.png)
 
 ## Note 
 * Your claim-report will be downloaded from https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel. If that URL doesn't work, you won't deliver the correct data to server.
