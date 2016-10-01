@@ -1,6 +1,6 @@
 # claim-gatherer-webextension
 ## Description
-This webextension is a utility tool to collect claim report of IBM employees, which works on Firefox, Chrome and Opera.
+This webextension is a utility tool to gather claim reports of IBM employees, which works on Firefox, Chrome and Opera.
 
 ## Workflow
 ![alt text](https://raw.githubusercontent.com/binartist/claim-gatherer-webextension/master/workflow.png "workflow")
