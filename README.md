@@ -22,5 +22,5 @@ This webextension is a utility tool to collect claim report of IBM employees, wh
 (Not published yet)
 
 ## Note 
-* Your claim-report will be downloaded from [https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel]. If that URL doesn't work, you won't deliver the correct data to server.
-* To see the claim-report you delivered, please visit [https://cybergear.io/claim-gatherer].
+* Your claim-report will be downloaded from https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel. If that URL doesn't work, you won't deliver the correct data to server.
+* To see the claim-report you delivered, please visit https://cybergear.io/claim-gatherer.
