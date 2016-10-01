@@ -2,9 +2,6 @@
 ## Description
 This webextension is a utility tool to gather claim reports of IBM employees, which works on Chrome, Firefox, Opera and Edge.
 
-## Workflow
-![alt text](https://raw.githubusercontent.com/binartist/claim-gatherer-webextension/master/workflow.png "workflow")
-
 ## Installation
 ### From Source Code
 #### For FireFox:
@@ -23,6 +20,8 @@ This webextension is a utility tool to gather claim reports of IBM employees, wh
 
 ### Usage
 
+## Workflow
+![alt text](https://raw.githubusercontent.com/binartist/claim-gatherer-webextension/master/workflow.png "workflow")
 
 ## Note 
 * Your claim-report will be downloaded from https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel. If that URL doesn't work, you won't deliver the correct data to server.
