@@ -15,7 +15,7 @@ This is an office automation tool to gather claim reports of IBM employees, whic
   3. Click *Load unpacked extension...* button.
   4. Select root directory of the source code to open.
 
-### From Official distribution:
+### From Official Distribution:
 #### For Firefox:
   Install it from [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/claim-gatherer/).
 #### For Chrome:
