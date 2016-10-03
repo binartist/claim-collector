@@ -8,7 +8,7 @@ var password_input = document.querySelector('#password');
 var eye = document.querySelector('#eye');
 var eye_path = document.querySelector('#eye-path');
 var eye_circle = document.querySelector('#eye-circle');
-var hint_label = document.querySelector('span');
+var hint_label = document.querySelector('p');
 
 var hint_container = document.querySelector('.hint-container');
 var fading_circle = document.querySelector('.sk-fading-circle');
