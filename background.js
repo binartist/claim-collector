@@ -123,10 +123,34 @@ function deliver_report(username, password, response) {
                         response(jsonObj.code, jsonObj.msg, jsonObj.data);
                     }
                 }
-                req.open('POST', 'http://cybergear.io:3000/report', false);
-                // req.open('POST', 'http://localhost:3000/report', false);
+                req.open('POST', 'https://cybergear.io/claim-gatherer/api/report', false);
+                // req.open('POST', 'http://localhost:8000/claim-gatherer/api/report', false);
                 req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                req.send('report=' + base64Str + '&username=' + username);
+
+                try {
+                    req.send('report=' + base64Str + '&username=' + username);
+                }
+                catch (e) {
+                    // console.log('exception ==== ' + e);
+
+                    var currentdate = new Date();
+                    var datetime = " @ " + currentdate.getFullYear() + "-"
+                        + (currentdate.getMonth() + 1) + "-"
+                        + currentdate.getDate() + " "
+                        + currentdate.getHours() + ":"
+                        + currentdate.getMinutes() + ":"
+                        + currentdate.getSeconds();
+
+                    chrome.storage.local.set({
+                        last_update: {
+                            datatime: datetime,
+                            code: -2,
+                            msg: 'Failed'
+                        }
+                    });
+
+                    response(-2, 'Failed');
+                }
             }
             else {
                 var currentdate = new Date();
@@ -151,13 +175,36 @@ function deliver_report(username, password, response) {
     }
 
     xmlHttp.open('POST', 'https://w3.ibm.com/services/bicentral/protect/reportframework/personal/5848/report.xls?type=excel', false);
-    // xmlHttp.open('GET', 'http://localhost:3000/report', false);
+    // xmlHttp.open('GET', 'http://localhost:8000/claim-gatherer/api/report', false);
     xmlHttp.setRequestHeader('Authorization', 'Basic ' + btoa(username + ':' + password));
     xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
     // xmlHttp.responseType = 'arraybuffer';
     xmlHttp.overrideMimeType('text/plain; charset=x-user-defined');
 
-    xmlHttp.send(null);
+    try {
+        xmlHttp.send(null);
+    }
+    catch (e) {
+        // console.log('exception ==== ' + e);
+
+        var currentdate = new Date();
+        var datetime = " @ " + currentdate.getFullYear() + "-"
+            + (currentdate.getMonth() + 1) + "-"
+            + currentdate.getDate() + " "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+
+        chrome.storage.local.set({
+            last_update: {
+                datatime: datetime,
+                code: -1,
+                msg: 'Failed'
+            }
+        });
+
+        response(-1, 'Failed');
+    }
 };
 
 function scheduleDeliverTask() {

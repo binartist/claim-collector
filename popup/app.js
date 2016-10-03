@@ -5,6 +5,9 @@
 var action_btn = document.querySelector('#deliver_btn')
 var intranetid_input = document.querySelector('#intranetId');
 var password_input = document.querySelector('#password');
+var eye = document.querySelector('#eye');
+var eye_path = document.querySelector('#eye-path');
+var eye_circle = document.querySelector('#eye-circle');
 var hint_label = document.querySelector('span');
 
 var hint_container = document.querySelector('.hint-container');
@@ -12,6 +15,19 @@ var fading_circle = document.querySelector('.sk-fading-circle');
 
 var homepage_btn = document.querySelector('.homepage_btn');
 var webpage_btn = document.querySelector('.webpage_btn');
+
+eye.onclick = function () {
+    if (password_input.type == "text") {
+        password_input.type = "password";
+        eye_path.style.fill = "black";
+        eye_circle.style.fill = "black";
+    }
+    else {
+        password_input.type = "text";
+        eye_path.style.fill = "grey";
+        eye_circle.style.fill = "grey";
+    }
+}
 
 homepage_btn.onclick = function () {
     chrome.tabs.create({url:"https://github.com/binartist/claim-gatherer-webextension"});

@@ -7,16 +7,24 @@ body {
 }
 
 /*.input-container {*/
-    /*text-align: center;*/
+    /*position: relative;*/
 /*}*/
 
-.input-container input {
-    display: block;
+#intranetId {
+    display: inline-block;
     width: 214px;
 }
 
-.input-container input:last-child {
-    margin-top: 5px;
+#password {
+    margin-top: 10px;
+    width: 214px;
+}
+
+#eye {
+    /*display: inline;*/
+    position: absolute;
+    right: 7px;
+    top: 41px;
 }
 
 .action-container {
