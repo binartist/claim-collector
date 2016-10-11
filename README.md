@@ -9,7 +9,7 @@ This is an office automation tool to gather claim reports of IBM employees, whic
   2. Click *Load Temporay Add-on* button.
   3. Select manifest.json in root directory of the source code to open.
 
-#### For Chrome:
+#### For Chrome (Recommended):
   1. Type **chrome://extensions** in address bar.
   2. Check *Developer mode* box.
   3. Click *Load unpacked extension...* button.
@@ -31,5 +31,5 @@ This is an office automation tool to gather claim reports of IBM employees, whic
 ![workflow](https://raw.githubusercontent.com/binartist/claim-gatherer-webextension/master/workflow.png)
 
 ## Note 
-* Your password is only used to download claim report from [IBM service](https://w3.ibm.comrvices/bicentral/protect/reportframework/personal/5848/report.xls?type=excel) and stored locally in your browser. If that service doesn't work, something weird would happen.
+* Your password is only used to download claim report from [IBM service](https://w3.ibm.com/services/bicentral/protect/reportframework/personal/5848/report.xls?type=excel) and stored locally in your browser. If that service doesn't work, something weird would happen.
 * To see the claim-report you delivered, please visit [here](https://cybergear.io/claim-gatherer).
